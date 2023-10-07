@@ -13,6 +13,8 @@
 		CA2FE06B2AD12287004DE193 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2FE0692AD12287004DE193 /* Main.storyboard */; };
 		CA2FE06D2AD12287004DE193 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2FE06C2AD12287004DE193 /* Assets.xcassets */; };
 		CA2FE0702AD12287004DE193 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2FE06E2AD12287004DE193 /* LaunchScreen.storyboard */; };
+		CA7E1C372AD136110037E8B8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E1C362AD136110037E8B8 /* ResultViewController.swift */; };
+		CA7E1C392AD141EA0037E8B8 /* GetDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E1C382AD141EA0037E8B8 /* GetDataProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CA2FE06C2AD12287004DE193 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA2FE06F2AD12287004DE193 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA2FE0712AD12287004DE193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA7E1C362AD136110037E8B8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		CA7E1C382AD141EA0037E8B8 /* GetDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				CA2FE06C2AD12287004DE193 /* Assets.xcassets */,
 				CA2FE06E2AD12287004DE193 /* LaunchScreen.storyboard */,
 				CA2FE0712AD12287004DE193 /* Info.plist */,
+				CA7E1C362AD136110037E8B8 /* ResultViewController.swift */,
+				CA7E1C382AD141EA0037E8B8 /* GetDataProtocol.swift */,
 			);
 			path = "sopt33-first-seminar";
 			sourceTree = "<group>";
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA7E1C392AD141EA0037E8B8 /* GetDataProtocol.swift in Sources */,
 				CA2FE0682AD12286004DE193 /* ViewController.swift in Sources */,
 				CA2FE0642AD12286004DE193 /* AppDelegate.swift in Sources */,
 				CA2FE0662AD12286004DE193 /* SceneDelegate.swift in Sources */,
+				CA7E1C372AD136110037E8B8 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
