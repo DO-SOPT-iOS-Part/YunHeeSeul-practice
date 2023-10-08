@@ -36,10 +36,9 @@ class ViewController: UIViewController {
     
     func pushToResultVC() {
         guard let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController else {return}
-        resultVC.email = idText
-        resultVC.password = passwordText
-//        resultVC.delegate = self
+        resultVC.setText(id: idText, password: passwordText)
         self.navigationController?.pushViewController(resultVC, animated: true)
+        //        resultVC.delegate = self
         resultVC.loginDataCompletion = {
             data in print("클로저로 받아온 email : \(data[0]), 클로저로 받아온 password : \(data[1])")
         }
@@ -47,8 +46,7 @@ class ViewController: UIViewController {
     
     func presentToResultVC() {
         guard let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController else {return}
-        resultVC.email = idText
-        resultVC.password = passwordText
+        resultVC.setText(id: idText, password: passwordText)
         self.present(resultVC, animated: true)
     }
     

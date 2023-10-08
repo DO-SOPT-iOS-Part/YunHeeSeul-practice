@@ -22,8 +22,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtg-YM-ki9">
-                                <rect key="frame" x="50" y="284" width="293" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtg-YM-ki9">
+                                <rect key="frame" x="80" y="284" width="263" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -39,11 +39,12 @@
                                     <action selector="loginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0bb-nI-SX6"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bfh-vf-qN2">
-                                <rect key="frame" x="50" y="338" width="293" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bfh-vf-qN2">
+                                <rect key="frame" x="80" y="338" width="263" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="293" id="Ivz-i7-cXZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="273" id="Zxc-MG-g37"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
@@ -51,6 +52,20 @@
                                     <action selector="pwTextFieldDidEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="0Bz-l1-Aeo"/>
                                 </connections>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="exclamationmark.lock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="C2A-PZ-F7e">
+                                <rect key="frame" x="44" y="339" width="34" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.0" green="0.47843137254901963" blue="1" alpha="0.86750637755102045" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="gkY-Fp-da2"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="envelope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7Yt-O6-JMV">
+                                <rect key="frame" x="47" y="286.33333333333326" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="z9o-fY-fxc"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -80,10 +95,9 @@
         <!--Navigation Controller-->
         <scene sceneID="Tqv-xc-6Xb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x9j-VF-N0F" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="x9j-VF-N0F" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r3n-Jk-fKd">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -106,7 +120,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48A-ZJ-HbC">
                                 <rect key="frame" x="140" y="438" width="113" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="뒤로가기"/>
                                 <connections>
                                     <action selector="backButtonTap:" destination="otp-S8-YE7" eventType="touchUpInside" id="ldv-4B-qga"/>
                                 </connections>
@@ -149,6 +163,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="envelope" catalog="system" width="128" height="93"/>
+        <image name="exclamationmark.lock" catalog="system" width="125" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

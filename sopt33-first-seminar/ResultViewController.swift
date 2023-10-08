@@ -24,6 +24,11 @@ class ResultViewController: UIViewController {
         self.passwordLabel.text = "password : \(password)"
     }
     
+    func setText(id: String, password: String){
+        self.email = id
+        self.password = password
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bindText()
