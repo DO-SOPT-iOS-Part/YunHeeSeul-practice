@@ -10,10 +10,17 @@ import UIKit
 class ViewController: UIViewController {
     private var idText: String = ""
     private var passwordText: String = ""
-
+    private var addressText: String = ""
+    var emailList: [String] = ["naver.com", "google.com", "kakao.com", "daum.net"]
+    @IBOutlet weak var emailTextView: UITextField!
+    @IBOutlet weak var pickerView: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        emailTextView.inputView = pickerView
+        pickerView.delegate = self
+        pickerView.dataSource = self
+
     }
     @IBAction func idTextFieldDidEditing(_ sender: Any) {
         guard let textField = sender as? UITextField else {return}
@@ -22,6 +29,12 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func emailTextFieldSelecting(_ sender: Any) {
+        guard let textField = sender as? UITextField else {return}
+        if let addressText = textField.text{
+            self.addressText = addressText
+        }
+    }
     @IBAction func pwTextFieldDidEditing(_ sender: Any) {
         guard let textField = sender as? UITextField else {return}
         if let pwText = textField.text {
@@ -36,7 +49,7 @@ class ViewController: UIViewController {
     
     func pushToResultVC() {
         guard let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController else {return}
-        resultVC.setText(id: idText, password: passwordText)
+        resultVC.setText(id: "\(idText)@\(addressText)", password: passwordText)
         self.navigationController?.pushViewController(resultVC, animated: true)
         //        resultVC.delegate = self
         resultVC.loginDataCompletion = {
@@ -56,5 +69,21 @@ class ViewController: UIViewController {
 extension ViewController: GetDataProtocol {
     func getLoginData(email: String, password: String) {
         print("받아온 email : \(email), 받아온 password : \(password)")
+    }
+}
+
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return emailList.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return emailList[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.emailTextView.text = self.emailList[row]
     }
 }

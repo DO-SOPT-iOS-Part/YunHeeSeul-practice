@@ -35,7 +35,7 @@ class ResultViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func backButtonTap(_ sender: Any) {
+    @IBAction func saveButtonTap(_ sender: Any) {
         if let navigationController = self.navigationController {
             navigationController.popViewController(animated: true)
         }else{
