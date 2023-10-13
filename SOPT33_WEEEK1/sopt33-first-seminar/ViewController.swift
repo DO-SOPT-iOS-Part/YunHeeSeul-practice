@@ -51,7 +51,6 @@ class ViewController: UIViewController {
         guard let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController else {return}
         resultVC.setText(id: "\(idText)@\(addressText)", password: passwordText)
         self.navigationController?.pushViewController(resultVC, animated: true)
-        //        resultVC.delegate = self
         resultVC.loginDataCompletion = {
             data in print("클로저로 받아온 email : \(data[0]), 클로저로 받아온 password : \(data[1])")
         }
@@ -62,8 +61,6 @@ class ViewController: UIViewController {
         resultVC.setText(id: idText, password: passwordText)
         self.present(resultVC, animated: true)
     }
-    
-    
 }
 
 extension ViewController: GetDataProtocol {
@@ -72,17 +69,20 @@ extension ViewController: GetDataProtocol {
     }
 }
 
-extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
-
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    //pickerView 개수
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+    //pickerView 선택지(데이터) 개수 설정
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return emailList.count
     }
+    //pickerView 선택지(데이터) 설정
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return emailList[row]
     }
+    //textfield에 선택한 값 설정
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.emailTextView.text = self.emailList[row]
     }
