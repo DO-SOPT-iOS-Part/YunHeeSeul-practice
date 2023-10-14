@@ -13,7 +13,7 @@ class ResultViewController: UIViewController {
     
     var delegate: GetDataProtocol?
     
-    var loginDataCompletion: (([String]) -> Void)? //스트링 타입의 배열을 매개변수로 전달 할거고, 리턴타입은 void다!
+    var loginDataCompletion: (([String]) -> Void)? //스트링 타입의 배열을 매개변수로 전달, 리턴타입은 void
 
     @IBOutlet weak var emailLabel: UILabel!
     
@@ -32,7 +32,6 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindText()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func saveButtonTap(_ sender: Any) {

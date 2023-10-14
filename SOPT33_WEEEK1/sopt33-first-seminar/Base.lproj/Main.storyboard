@@ -159,7 +159,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="BACK">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.91776945106161179" green="0.86522094267134897" blue="0.953870006443299" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.64676629079581094" green="0.55565135928894027" blue="0.74491003787878785" alpha="0.38389900662251658" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="saveButtonTap:" destination="otp-S8-YE7" eventType="touchUpInside" id="ldv-4B-qga"/>
