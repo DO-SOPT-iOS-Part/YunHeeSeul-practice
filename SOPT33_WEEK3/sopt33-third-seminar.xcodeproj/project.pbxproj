@@ -15,6 +15,11 @@
 		CA2F35342AECCDC60004078A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2F35322AECCDC60004078A /* LaunchScreen.storyboard */; };
 		CA2F353D2AECCF7A0004078A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CA2F353C2AECCF7A0004078A /* SnapKit */; };
 		CA2F35462AECD0250004078A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CA2F35452AECD0250004078A /* Then */; };
+		CA2F35482AECDCFF0004078A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F35472AECDCFF0004078A /* TableViewCell.swift */; };
+		CA2F354A2AECE56F0004078A /* ItemListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F35492AECE56F0004078A /* ItemListData.swift */; };
+		CA2F354E2AECF0400004078A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F354D2AECF0400004078A /* CollectionViewController.swift */; };
+		CA2F35502AECF0D10004078A /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F354F2AECF0D10004078A /* ImageCollectionViewCell.swift */; };
+		CA2F35522AECF4E90004078A /* ImageCollectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F35512AECF4E90004078A /* ImageCollectionData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		CA2F35302AECCDC60004078A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA2F35332AECCDC60004078A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA2F35352AECCDC60004078A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA2F35472AECDCFF0004078A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		CA2F35492AECE56F0004078A /* ItemListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListData.swift; sourceTree = "<group>"; };
+		CA2F354D2AECF0400004078A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		CA2F354F2AECF0D10004078A /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		CA2F35512AECF4E90004078A /* ImageCollectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,11 @@
 				CA2F35302AECCDC60004078A /* Assets.xcassets */,
 				CA2F35322AECCDC60004078A /* LaunchScreen.storyboard */,
 				CA2F35352AECCDC60004078A /* Info.plist */,
+				CA2F35472AECDCFF0004078A /* TableViewCell.swift */,
+				CA2F35492AECE56F0004078A /* ItemListData.swift */,
+				CA2F354D2AECF0400004078A /* CollectionViewController.swift */,
+				CA2F354F2AECF0D10004078A /* ImageCollectionViewCell.swift */,
+				CA2F35512AECF4E90004078A /* ImageCollectionData.swift */,
 			);
 			path = "sopt33-third-seminar";
 			sourceTree = "<group>";
@@ -150,7 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA2F354E2AECF0400004078A /* CollectionViewController.swift in Sources */,
 				CA2F352C2AECCDC40004078A /* ViewController.swift in Sources */,
+				CA2F35482AECDCFF0004078A /* TableViewCell.swift in Sources */,
+				CA2F35502AECF0D10004078A /* ImageCollectionViewCell.swift in Sources */,
+				CA2F354A2AECE56F0004078A /* ItemListData.swift in Sources */,
+				CA2F35522AECF4E90004078A /* ImageCollectionData.swift in Sources */,
 				CA2F35282AECCDC40004078A /* AppDelegate.swift in Sources */,
 				CA2F352A2AECCDC40004078A /* SceneDelegate.swift in Sources */,
 			);
