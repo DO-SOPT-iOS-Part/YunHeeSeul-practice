@@ -9,12 +9,21 @@ import UIKit
 import SnapKit
 import Then
 
+protocol ItemSelectedProtocol: NSObject {
+    func getButtonState(state: Bool, row: Int)
+}
+
 class ImageCollectionViewCell: UICollectionViewCell {
     static let identifier: String = "ImageCollectionViewCell"
+    
+    weak var delegate: ItemSelectedProtocol?
+    var itemRow: Int?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setLayout()
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -35,6 +44,9 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     private let imageView = UIImageView()
     private lazy var likeButton = UIButton().then {
+        $0.addTarget(self,
+                             action: #selector(likeButtonTap),
+                             for: .touchUpInside)
         $0.setImage(UIImage(systemName: "hand.thumbsup"), for: .normal)
         $0.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .selected)
     }
@@ -44,4 +56,13 @@ class ImageCollectionViewCell: UICollectionViewCell {
         self.imageView.image = image
         self.likeButton.isSelected = data.isLiked
     }
+    
+    @objc private func likeButtonTap() {
+            self.likeButton.isSelected.toggle()
+            if let itemRow {
+                self.delegate?.getButtonState(state: self.likeButton.isSelected,
+                                              row: itemRow)
+            }
+        }
 }
+

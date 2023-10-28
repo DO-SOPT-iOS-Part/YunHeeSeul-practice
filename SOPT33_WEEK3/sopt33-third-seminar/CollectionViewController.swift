@@ -54,7 +54,13 @@ extension CollectionViewController: UICollectionViewDataSource {
         guard let item = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier,
                                                             for: indexPath) as? ImageCollectionViewCell else {return UICollectionViewCell()}
         item.bindData(data: imageCollectionList[indexPath.row])
+        item.delegate = self
         return item
     }
 }
 
+extension CollectionViewController: ItemSelectedProtocol {
+    func getButtonState(state: Bool, row: Int) {
+        imageCollectionList[row].isLiked = state
+    }
+}
