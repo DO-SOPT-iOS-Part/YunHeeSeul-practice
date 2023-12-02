@@ -13,6 +13,13 @@
 		CA5F7A242B1AF45500FBFCFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA5F7A222B1AF45500FBFCFE /* Main.storyboard */; };
 		CA5F7A262B1AF45700FBFCFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5F7A252B1AF45700FBFCFE /* Assets.xcassets */; };
 		CA5F7A292B1AF45700FBFCFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA5F7A272B1AF45700FBFCFE /* LaunchScreen.storyboard */; };
+		CA5F7A322B1AFA8F00FBFCFE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CA5F7A312B1AFA8F00FBFCFE /* SnapKit */; };
+		CA5F7A352B1AFA9A00FBFCFE /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CA5F7A342B1AFA9A00FBFCFE /* Then */; };
+		CA5F7A372B1AFAB800FBFCFE /* SoptMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F7A362B1AFAB800FBFCFE /* SoptMember.swift */; };
+		CA5F7A392B1AFADE00FBFCFE /* CustomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F7A382B1AFADE00FBFCFE /* CustomTVC.swift */; };
+		CA5F7A3B2B1B02F200FBFCFE /* MVVMPracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F7A3A2B1B02F200FBFCFE /* MVVMPracticeVC.swift */; };
+		CA5F7A3F2B1B06C300FBFCFE /* MVVMPracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F7A3E2B1B06C300FBFCFE /* MVVMPracticeViewModel.swift */; };
+		CA5F7A412B1B10C500FBFCFE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F7A402B1B10C500FBFCFE /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,11 @@
 		CA5F7A252B1AF45700FBFCFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA5F7A282B1AF45700FBFCFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA5F7A2A2B1AF45700FBFCFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA5F7A362B1AFAB800FBFCFE /* SoptMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoptMember.swift; sourceTree = "<group>"; };
+		CA5F7A382B1AFADE00FBFCFE /* CustomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTVC.swift; sourceTree = "<group>"; };
+		CA5F7A3A2B1B02F200FBFCFE /* MVVMPracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMPracticeVC.swift; sourceTree = "<group>"; };
+		CA5F7A3E2B1B06C300FBFCFE /* MVVMPracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMPracticeViewModel.swift; sourceTree = "<group>"; };
+		CA5F7A402B1B10C500FBFCFE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5F7A322B1AFA8F00FBFCFE /* SnapKit in Frameworks */,
+				CA5F7A352B1AFA9A00FBFCFE /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +77,11 @@
 				CA5F7A252B1AF45700FBFCFE /* Assets.xcassets */,
 				CA5F7A272B1AF45700FBFCFE /* LaunchScreen.storyboard */,
 				CA5F7A2A2B1AF45700FBFCFE /* Info.plist */,
+				CA5F7A362B1AFAB800FBFCFE /* SoptMember.swift */,
+				CA5F7A382B1AFADE00FBFCFE /* CustomTVC.swift */,
+				CA5F7A3A2B1B02F200FBFCFE /* MVVMPracticeVC.swift */,
+				CA5F7A3E2B1B06C300FBFCFE /* MVVMPracticeViewModel.swift */,
+				CA5F7A402B1B10C500FBFCFE /* Observable.swift */,
 			);
 			path = "sopt33-7th-seminar";
 			sourceTree = "<group>";
@@ -83,6 +102,10 @@
 			dependencies = (
 			);
 			name = "sopt33-7th-seminar";
+			packageProductDependencies = (
+				CA5F7A312B1AFA8F00FBFCFE /* SnapKit */,
+				CA5F7A342B1AFA9A00FBFCFE /* Then */,
+			);
 			productName = "sopt33-7th-seminar";
 			productReference = CA5F7A192B1AF45500FBFCFE /* sopt33-7th-seminar.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +134,10 @@
 				Base,
 			);
 			mainGroup = CA5F7A102B1AF45500FBFCFE;
+			packageReferences = (
+				CA5F7A302B1AFA8F00FBFCFE /* XCRemoteSwiftPackageReference "SnapKit" */,
+				CA5F7A332B1AFA9A00FBFCFE /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = CA5F7A1A2B1AF45500FBFCFE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +165,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5F7A412B1B10C500FBFCFE /* Observable.swift in Sources */,
 				CA5F7A212B1AF45500FBFCFE /* ViewController.swift in Sources */,
+				CA5F7A372B1AFAB800FBFCFE /* SoptMember.swift in Sources */,
+				CA5F7A3F2B1B06C300FBFCFE /* MVVMPracticeViewModel.swift in Sources */,
 				CA5F7A1D2B1AF45500FBFCFE /* AppDelegate.swift in Sources */,
 				CA5F7A1F2B1AF45500FBFCFE /* SceneDelegate.swift in Sources */,
+				CA5F7A392B1AFADE00FBFCFE /* CustomTVC.swift in Sources */,
+				CA5F7A3B2B1B02F200FBFCFE /* MVVMPracticeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +388,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA5F7A302B1AFA8F00FBFCFE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		CA5F7A332B1AFA9A00FBFCFE /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA5F7A312B1AFA8F00FBFCFE /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA5F7A302B1AFA8F00FBFCFE /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		CA5F7A342B1AFA9A00FBFCFE /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA5F7A332B1AFA9A00FBFCFE /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA5F7A112B1AF45500FBFCFE /* Project object */;
 }
